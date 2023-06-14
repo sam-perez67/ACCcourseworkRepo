@@ -5,7 +5,9 @@ if float(years) < 1:
 vacation = input('number of vacation days: ')
 unpaid_vacation = float(vacation) - 3
 if unpaid_vacation >= 0:
-    unpaid_vacation = float(unpaid_vacation) * 200
+    unpaid_vacation = -200.00
+else:
+    unpaid_vacation = 0
 if float(years) > 1 or float(months) >= 3:
     revenue = input('revenue: ')
     if float(revenue) > 10000 and float(revenue) < 100000:
@@ -23,13 +25,10 @@ if float(years) > 1 or float(months) >= 3:
                 months = 0
 
 if float(years) > 4.99999 and float(revenue) > 99999:
-    additional_bonus = 1,000
+    additional_bonus = 1000.00
 else:
-    additional_bonus = 0
-
-if unpaid_vacation <= 0: 
-    gross = 2000 + float(bonus) + float(additional_bonus)
-else: gross = (2000 + float(bonus) + float(additional_bonus)) - float(unpaid_vacation)
+    additional_bonus = 0.0
+gross = 2000 + float(bonus) + float(additional_bonus) - float(unpaid_vacation)
 print('Paystub:')
 print(name)
 if float(years) <= 0.9999:
