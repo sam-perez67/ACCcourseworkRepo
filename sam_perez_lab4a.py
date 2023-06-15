@@ -18,9 +18,10 @@ if miles >= 0.0:
                   print(gal,' gallons is equal to ', str(liters), 'liters')
                   print(pounds,' pounds is equal to ', str(kilograms), 'kilograms')
                   print(inches,' inches is equal to ', str(centi), 'centimeters')
-                else: print('No negative inches, terminating program.')
+                else: print('Incorrect value, terminating program.')
             else: print('No negative weight, terminating program.')
         else: print('No negative volume, terminating program.')
     else: print("That's too hot, terminating program.")
 else: print('No negative distance, terminating program.')
+
 
