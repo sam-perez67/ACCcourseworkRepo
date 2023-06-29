@@ -1,10 +1,8 @@
-tries = 0
-tries_left = 3
-
-while tries <= 3:
-    miles = int(input('William, how many miles would you like converted to kilometers: '))
-    kilos = miles * 1.6
-    while miles <= 0 and tries < 3:
+def main():
+    tries = 0
+    tries_left = 3
+    miles = int(input('Hello William, enter number of miles: '))
+    while tries <=3 and miles <= 0:
         tries += 1
         tries_left -= 1
         print('Please enter a measurable distance, you have ', tries_left, ' tries left.')
@@ -12,10 +10,8 @@ while tries <= 3:
     if tries_left <= 0 and miles <=0:
         print('Outside of acceptable input, you have no more attempts')
     else:
-        print(miles,' miles is equal to ', kilos, 'kilometers')
-
+        milesToKm(miles)
     far = int(input('What is the temperature: '))
-    cels = (far-32)*5/9
     while far >= 1000.0 and tries < 3:
         tries += 1
         tries_left -= 1
@@ -24,10 +20,8 @@ while tries <= 3:
     if tries_left <= 0 and far >=1000.0:
         print('Outside of acceptable input, you have no more attempts')
     else: 
-        print(far, ' fahrenheit is equal to ', cels, 'celsius')
-
+        fahToCel(far)
     gal = float(input('How many gallons: '))
-    liters = gal*3.9
     while gal <= 0 and tries < 3:
         tries += 1
         tries_left -= 1
@@ -35,11 +29,9 @@ while tries <= 3:
         gal = int(input('How many gallons: '))
     if tries_left <= 0 and gal <= 0:
         print('Outside of acceptable input, you have no more attempts')
-    else: 
-        print(gal,' gallons is equal to ', liters, 'liters')
-
+    else:
+        galToLit(gal)
     pounds = float(input('How many pounds: '))
-    kilograms = pounds*.45
     while pounds <= 0 and tries < 3:
         tries += 1
         tries_left -= 1
@@ -48,10 +40,8 @@ while tries <= 3:
     if tries_left <= 0 and pounds >= 0:
         print('Outside of acceptable input, you have no more attempts')
     else: 
-        print(pounds,' pounds is equal to ', kilograms, 'kilograms')
-
+        poundsToKg(pounds)
     inches= float(input('How many inches: '))
-    centi = inches*2.54
     while inches <= 0 and tries < 3:
         tries += 1
         tries_left -= 1
@@ -60,22 +50,31 @@ while tries <= 3:
     if tries_left <= 0 and inches <= 0:
         print('Outside of acceptable input, you have no more attempts')
     else: 
-        print(inches,' inches is equal to ', centi, 'centimeters')
+        inchesToCm(inches)
 
-    break
+def milesToKm(miles):
+    tries = 0
+    kilos = miles * 1.6
+    print(miles,' miles is equal to ', kilos, 'kilometers')
 
+def fahToCel(far):
+    tries = 0
+    cels = (far-32)*5/9
+    print(far, ' fahrenheit is equal to ', cels, 'celsius')
 
+def galToLit(gal):
+    tries = 0
+    liters = gal*3.9
+    print(gal,' gallons is equal to ', liters, 'liters')
 
+def poundsToKg(pounds):
+     tries = 0
+     kilograms = pounds*.45
+     print(pounds,' pounds is equal to ', kilograms, 'kilograms')
 
+def inchesToCm(inches):
+    tries = 0
+    centi = inches*2.54
+    print(inches,' inches is equal to ', centi, 'centimeters')
 
-                  
-                  
-                  
-                  
-                  
-
-            
-
-
-
-
+main()
