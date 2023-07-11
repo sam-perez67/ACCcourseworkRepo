@@ -5,39 +5,39 @@ poundsToKilo = 4
 inToCm = 5
 
 def main():
-    try:
-        name = input('What is your name?: ')
-        menu_choice = [1,2,3,4,5]
+     name = input('What is your name?: ')
+     for num in range(10):
+        try:
+            menu_choice = [1,2,3,4,5]
 
-        print('Enter 1 to convert miles to kilometers')
-        print('Enter 2 to convert fahrenheit to celsius')
-        print('Enter 3 to convert gallons to liters')
-        print('Enter 4 to convert pounds to kilograms')
-        print('Enter 5 to convert inches to centimeters')
+            print('Enter 1 to convert miles to kilometers')
+            print('Enter 2 to convert fahrenheit to celsius')
+            print('Enter 3 to convert gallons to liters')
+            print('Enter 4 to convert pounds to kilograms')
+            print('Enter 5 to convert inches to centimeters')
 
-        choice = int(input('Hello ' + name + ' what would you like to convert?: '))
-        while choice not in menu_choice:
-            raise Exception
-        
-    except Exception:
-        print('Please enter a valid menu choice')
-        choice = int(input('Hello ' + name + ' what would you like to convert?: '))
+            choice = int(input('Hello ' + name + ' what would you like to convert?: '))
+            while choice not in menu_choice:
+                raise Exception
+            
+        except Exception:
+            print('Please enter a valid menu choice')
+            choice = int(input('Hello ' + name + ' what would you like to convert?: '))
 
-    if choice == milesToKilo:
-        milesToKm()
-    elif choice == fahToCels:
-        fahToCel()
-    elif choice == galToLiter:
-        galToLit()
-    elif choice == poundsToKilo:
-        poundsToKg()
-    elif choice == inToCm:
-        inchesToCm()
-    else:
-        print('Are you sure you entered a valid number?')
+        if choice == milesToKilo:
+            milesToKm()
+        elif choice == fahToCels:
+            fahToCel()
+        elif choice == galToLiter:
+            galToLit()
+        elif choice == poundsToKilo:
+            poundsToKg()
+        elif choice == inToCm:
+            inchesToCm()
+        else:
+            print('Are you sure you entered a valid number?')
 
 def milesToKm():
-    for num in range(10):
         try:
             miles = float(input('How many miles: '))
             if miles <= 0:
@@ -54,7 +54,6 @@ def milesToKm():
             print('Error', err)
                
 def fahToCel():
-    for num in range(10):
         try:
             temp = float(input('What is the temperature?: '))
             if temp >= 1000:
@@ -71,7 +70,6 @@ def fahToCel():
             print('Error', err)
 
 def galToLit():
-    for num in range(10):
         try:
             gal = float(input('How many gallons: '))
             if gal <= 0:
@@ -88,7 +86,7 @@ def galToLit():
             print('Error', err)
 
 def poundsToKg():
-     for num in range(10):
+
         try:
             pounds = float(input('How many pounds: '))
             if pounds <= 0:
@@ -104,8 +102,7 @@ def poundsToKg():
         except Exception as err:
             print('Error', err)
 
-def inchesToCm(inches):
-    for num in range(10):
+def inchesToCm():
         try:
             inches = float(input('How many inches: '))
             if inches <= 0:
