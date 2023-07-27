@@ -6,7 +6,7 @@ inToCm = 5
 
 def main():
      name = input('What is your name?: ')
-     for num in range(10):
+     for x in range(10):
         try:
             menu_choice = [1,2,3,4,5]
 
